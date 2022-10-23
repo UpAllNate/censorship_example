@@ -4,7 +4,7 @@ This program defines the following methods:
 replace_with_char,
 censor_word_in_line,
 censor_whole_word_in_line,
-clense_file
+cleanse_file
 
 #####################################
 replace_with_char is a simple method that replaces characters in a string with your supplied character
@@ -30,7 +30,7 @@ censor_word_in_line("friend", "I hate the show Friends", "*", case_insensitive_m
 censor_word_in_line("friend", "I hate the show Friends", "*", case_insensitive_mode=True) would return "I hate the show ******s"
 
 #####################################
-clense_file takes:
+cleanse_file takes:
 
     a file path and name as a string for:
         input text file,
@@ -45,7 +45,7 @@ clense_file takes:
 this project includes an inputText that was found on reddit.com/r/nosleep.
 I honestly haven't read it, so I apologize if there's anything in the story that is triggering.
 
-At the end of this program is a call to clense_file with the local input / censor list references
+At the end of this program is a call to cleanse_file with the local input / censor list references
 
 Try playing with different input combinations and censored words in the censoredWords.txt file!
 
@@ -130,7 +130,7 @@ def censor_whole_word_in_line(
         
     return False, None, line
 
-def clense_file(
+def cleanse_file(
     cwordFile : str,
     inputFile : str,
     outputFile : str,
@@ -191,7 +191,7 @@ def clense_file(
 
 
 if __name__ == "__main__":
-    naughty_count = clense_file(
+    naughty_count = cleanse_file(
         cwordFile= "censoredWords.txt",
         inputFile= "inputText.txt",
         outputFile= "outputText.txt",
